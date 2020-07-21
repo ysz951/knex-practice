@@ -33,7 +33,7 @@ function paginateProducts(page) {
 }
 // paginateProducts(2)
 
-function mostPopularVideosForDays(daysAgo) {
+function productsAddedDaysAgo(daysAgo) {
     knexInstance
       .select('id', 'name', 'price', 'date_added', 'checked','category')
       .where(
@@ -46,7 +46,7 @@ function mostPopularVideosForDays(daysAgo) {
         console.log(result)
       })
 }
-// mostPopularVideosForDays(45)
+// productsAddedDaysAgo(45)
 
 function totalCostForCategories() {
     knexInstance

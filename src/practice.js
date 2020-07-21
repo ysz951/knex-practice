@@ -20,7 +20,7 @@ function searchByProduceName(searchTerm) {
 //   searchByProduceName('holo')
 
   function paginateProducts(page) {
-    const productsPerPage = 10
+    const productsPerPage = 6
     const offset = productsPerPage * (page - 1)
     knexInstance
       .select('product_id', 'name', 'price', 'category')
@@ -32,7 +32,7 @@ function searchByProduceName(searchTerm) {
       })
   }
   
-//   paginateProducts(2)
+
 // paginateProducts(2)
 
 function getProductsWithImages() {
